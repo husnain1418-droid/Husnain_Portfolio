@@ -1,0 +1,243 @@
+.nav-container{
+    display: flex;
+    height: 60px;
+   justify-content: space-around;
+   align-items: center;
+   position: sticky;
+  top: 0;
+  z-index: 1000;
+    opacity: 0;
+  transform: translateY(-100px);
+  animation: slideFade 1s ease-in-out forwards;
+   box-shadow: 0 10px 12px rgba(238, 238, 238, 0.2);
+}
+.logo{
+    margin-left: 80px;
+    font-size: larger;
+}
+.nav-list ul{
+    margin-left: 500px;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-weight: light;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+}
+.nav-list li{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+.nav-list li::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 20%;
+    background-color: var(--underline-color);
+    transition: width 0.3s ease;
+}
+.nav-list li:hover::after{
+    width: 100%;
+}
+.active{
+    color: black;
+    background-color: rgb(143, 94, 94);
+}
+.Modes{
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+/* main image css from here */
+
+.mainContainer{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.myPic {
+  width: 400px;
+  height: 400px;
+  background: url("/Users/husnainmehar/Documents/CHATGPT React/my-new-app/public/MyPic@.png") no-repeat center/cover;
+  background-position: center;
+  border-radius: 100%;
+   box-shadow: 0 18px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes slideFade {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes floating {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes floating-down {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.image-components{
+    /* border: 2px solid red; */
+    width: 600px;
+    margin-right: 120px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+     opacity: 0;
+  transform: translateX(-100px);
+  animation: slideFade 1.5s ease-out forwards;
+}
+.html-img{
+    position: relative;
+   left: 90px;
+    bottom: 115px;
+   
+}
+.cpp-img{
+    position: relative;
+    left: 130px;
+    bottom: 200px;
+}
+.n8n-img{
+    position: relative;
+   right: 20px;
+   top: 120px;
+}
+.react-img{
+    position: absolute;
+    right: -60px;
+   bottom: 100px;
+}
+.js-img{
+    position: absolute;
+    right: -65px;
+    top: 7px;
+
+}
+.float-imgs{
+    border-radius: 100%;
+    width: 57px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 12px rgba(0,0,0,0.2);
+    animation: floating 4s ease-in-out infinite;
+}
+
+.mainInfo{
+    /* border: 2px solid red; */
+    margin-bottom: 70px;
+    margin-left: 100px;
+     width: 500px;
+    height: 470px;
+     opacity: 0;
+  transform: translateX(-100px);
+  animation: slideFade 1.5s ease-out forwards;
+}
+.my-intro{
+    /* border: 2px solid red; */
+    font-size: 2.7vh;
+    line-height: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.changing-words{
+    /* border: 2px solid green; */
+    font-size: larger;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.description{
+    margin-top: 25px;
+    font-size: 15px;
+}
+.social-logos-circle{
+    /* border: 2px solid red; */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-logos-circle img{
+    margin-left: 5.4px;
+}
+.btns{
+    /* border: 2px solid yellow; */
+    display: flex;
+    margin-top: 35px;
+    gap: 14px;
+}
+.sign-up-btn img{
+    margin-right: 3px;
+}
+.sign-up-btn button{
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  padding: 12px;
+   border-radius: 10px;
+    border: 1px solid black;
+}
+.msg-me button{
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+   font-size: medium;
+}
+.msg-me img{
+    margin-right: 4px;
+}
+.social-media{
+    /* border: 2px solid red; */
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+}
+.social-quote{
+    /* border: 2px solid black; */
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.social-logos{
+    gap: 10px;
+    display: flex;
+}
+.social-logos a img{
+    /* border: 2px solid green; */
+    width: 1.3vw;
+    margin-right: 6px;
+    cursor: pointer;
+}
